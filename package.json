@@ -1,0 +1,26 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is my first learning for npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudiakash/namaste-react.git"
+  },
+  "keywords": [
+    "namaste",
+    "React"
+  ],
+  "author": "Akash Dudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudiakash/namaste-react/issues"
+  },
+  "homepage": "https://github.com/dudiakash/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}

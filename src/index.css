@@ -43,3 +43,8 @@
     width: 100%;
     height: 40%;
 }
+
+.fliter-btn {
+    margin: 10px;
+    cursor: pointer;
+}

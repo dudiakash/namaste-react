@@ -1,5 +1,4 @@
-const restData = {
-    "restaurants": [
+const restData = [
         {
           "info": {
             "id": "17036",
@@ -250,6 +249,5 @@ const restData = {
           }
         }
       ]
-}
 
 export default restData;

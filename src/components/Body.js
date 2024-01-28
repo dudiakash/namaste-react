@@ -1,7 +1,11 @@
 import RestaurantCard from "./RestauantCard";
-
+import { useState } from "react";
+import restData from "../utils/mockData";
 const Body = () => {
-  let listOfRestaurants = [
+  // state variable
+  const [listOfRestaurants, setListOfRestaurants] = useState(restData);
+
+  let listOfRestaurantsJS = [
     {
       id: "17036",
       name: "Leon's - Burgers & Wings (Leon Grill)",
@@ -23,15 +27,15 @@ const Body = () => {
       deliveryTime: 18,
     },
     {
-        id: "17038",
-        name: "MacD",
-        cloudinaryImageId: "b2edbc28b7b8219d6e0a9c049ce06658",
-        costForTwo: "₹300 for two",
-        cuisines: ["American", "Snacks", "Turkish", "Portuguese", "Continental"],
-        avgRating: 4.6,
-        totalRatingsString: "10K+",
-        deliveryTime: 18,
-      }
+      id: "17038",
+      name: "MacD",
+      cloudinaryImageId: "b2edbc28b7b8219d6e0a9c049ce06658",
+      costForTwo: "₹300 for two",
+      cuisines: ["American", "Snacks", "Turkish", "Portuguese", "Continental"],
+      avgRating: 4.6,
+      totalRatingsString: "10K+",
+      deliveryTime: 18,
+    },
   ];
 
   return (
@@ -40,18 +44,19 @@ const Body = () => {
         <button
           className="fliter-btn"
           onClick={() => {
-            listOfRestaurants = listOfRestaurants.filter(
-                (res) => res.avgRating>4
-            )
-            console.log(listOfRestaurants)
-          }}
+            const filterList = listOfRestaurants.filter(
+              (res) => res.info.avgRating > 4.4
+            );
+            setListOfRestaurants(filterList)
+          }
+        }
         >
           Top Rated Restaurants
         </button>
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} resData={restaurant} />
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>

@@ -27,3 +27,5 @@
 
 # React Hooks
 They are normal JS utility functions (written by fb developers as part of React)
+1. useState()
+2. useEffect()
